@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        application.statusBarStyle = .lightContent
+        UINavigationBar.appearance().barTintColor = Theme.Color.primary
+        UINavigationBar.appearance().tintColor = UIColor.white
+        var ncTitleTextAttributes: [NSAttributedStringKey: Any] = [:]
+        ncTitleTextAttributes[NSAttributedStringKey.foregroundColor] = UIColor.white
+        ncTitleTextAttributes[NSAttributedStringKey.font] = UIFont.systemFont(ofSize: 17)
+        UINavigationBar.appearance().titleTextAttributes = ncTitleTextAttributes
         return true
     }
 
